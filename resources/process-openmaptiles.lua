@@ -307,8 +307,8 @@ function way_function(way)
 			if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
 			--if onewaybicycle~="" then way.Attribute("oneway", onewaybicycle) end
 			--if cycleway_lane~="" then way.Attribute("cycleway_lane", cycleway_lane) end
-			local cycleleft = way:Find("cycleleft")
-			way.AttributeNumeric("cycleleft", 1)
+			--local cycleleft = way:Find("cycleleft")
+			--way.AttributeNumeric("cycleleft", 1)
 			--if cycleway_left~="" then way.Attribute("cycleway_left", cycleway_left) end
 			--if cycleway_right~="" then way.Attribute("cycleway_right", cycleway_right) end
 			if h~=highway then way:Attribute("subclass",highway) end
