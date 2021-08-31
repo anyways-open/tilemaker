@@ -195,10 +195,10 @@ function way_function(way)
 	local route    = way:Find("route")
 	local highway  = way:Find("highway")
 	local bicycle  = way:Find("bicycle")
-	-- local cycleway  = way:Find("cycleway")
-	-- local surface  = way:Find("surface")
-	-- local cyclestreet  = way:Find("cyclestreet")
-	-- local oneway_bicycle = way:Find("oneway:bicycle")
+	local cycleway = way:Find("cycleway")
+	local surface  = way:Find("surface")
+	local cyclestreet = way:Find("cyclestreet")
+	local oneway_bicycle = way:Find("oneway:bicycle")
 	-- local cycleway_lane = way.Find("cycleway:lane")
 	-- local cycleway_left_lane = way.Find("cycleway:left:lane")
 	-- local cycleway_right_lane = way.Find("cycleway:right:lane")
@@ -301,9 +301,9 @@ function way_function(way)
 			SetZOrder(way)
 			way:Attribute("class", h)
 			if bicycle~="" then way:Attribute("bicycle", bicycle) end
-			-- if cycleway~="" then way:Attribute("cycleway", cycleway) end
-			-- if surface~="" then way:Attribute("surface", surface) end
-			-- if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
+			if cycleway~="" then way:Attribute("cycleway", cycleway) end
+			if surface~="" then way:Attribute("surface", surface) end
+			if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
 			-- if oneway_bicycle~="" then way.Attribute("oneway:bicycle", oneway_bicycle) end
 			-- if cycleway_lane~="" then way.Attribute("cycleway:lane", cycleway_lane) end
 			-- if cycleway_left_lane~="" then way.Attribute("cycleway:left:lane", cycleway_left_lane) end
