@@ -200,8 +200,8 @@ function way_function(way)
 	local cyclestreet = way:Find("cyclestreet")
 	local oneway_bicycle = way:Find("oneway:bicycle")
 	-- local cycleway_lane = way.Find("cycleway:lane")
-	-- local cycleway_left_lane = way.Find("cycleway:left:lane")
-	-- local cycleway_right_lane = way.Find("cycleway:right:lane")
+	local cycleway_left = way.Find("cycleway:left")
+	local cycleway_right = way.Find("cycleway:right")
 	local waterway = way:Find("waterway")
 	local water    = way:Find("water")
 	local building = way:Find("building")
@@ -304,10 +304,10 @@ function way_function(way)
 			if cycleway~="" then way:Attribute("cycleway", cycleway) end
 			if surface~="" then way:Attribute("surface", surface) end
 			if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
-			-- if oneway_bicycle~="" then way.Attribute("oneway_bicycle", oneway_bicycle) end
+			if oneway_bicycle~="" then way.Attribute("oneway_bicycle", oneway_bicycle) end
 			-- if cycleway_lane~="" then way.Attribute("cycleway:lane", cycleway_lane) end
-			-- if cycleway_left_lane~="" then way.Attribute("cycleway:left:lane", cycleway_left_lane) end
-			-- if cycleway_right_lane~="" then way.Attribute("cycleway:right:lane", cycleway_right_lane) end
+			if cycleway_left~="" then way.Attribute("cycleway:left", cycleway_left) end
+			if cycleway_right~="" then way.Attribute("cycleway:right", cycleway_right) end
 			if h~=highway then way:Attribute("subclass",highway) end
 			SetBrunnelAttributes(way)
 			if ramp then way:AttributeNumeric("ramp",1) end
