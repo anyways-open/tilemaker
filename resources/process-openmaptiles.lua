@@ -194,6 +194,7 @@ waterwayClasses = Set { "stream", "river", "canal", "drain", "ditch" }
 function way_function(way)
 	local route    = way:Find("route")
 	local highway  = way:Find("highway")
+	local bicycle  = way:Find("bicycle")
 	local waterway = way:Find("waterway")
 	local water    = way:Find("water")
 	local building = way:Find("building")
@@ -292,6 +293,8 @@ function way_function(way)
 			way:MinZoom(minzoom)
 			SetZOrder(way)
 			way:Attribute("class", h)
+			way:Attribute("bicycle", bicycle)
+			if h~=highway then way:Attribute("subclass",highway) end
 			SetBrunnelAttributes(way)
 			if ramp then way:AttributeNumeric("ramp",1) end
 
