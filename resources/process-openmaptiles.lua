@@ -300,7 +300,7 @@ function way_function(way)
 			way:MinZoom(minzoom)
 			SetZOrder(way)
 			way:Attribute("class", h)
-			way:Attribute("bicycle", bicycle)
+			if bicycle~="" then way:Attribute("bicycle", bicycle) end
 			-- if cycleway~="" then way:Attribute("cycleway", cycleway) end
 			-- if surface~="" then way:Attribute("surface", surface) end
 			-- if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
