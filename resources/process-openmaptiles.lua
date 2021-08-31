@@ -200,8 +200,8 @@ function way_function(way)
 	local cyclestreet  = way:Find("cyclestreet")
 	local oneway_bicycle = way:Find("oneway:bicycle")
 	local cycleway_lane = way.Find("cycleway:lane")
-	local cycleway_left_lane =way.Find("cycleway:left:lane")
-	local cycleway_right_lane =way.Find("cycleway:right:lane")
+	local cycleway_left_lane = way.Find("cycleway:left:lane")
+	local cycleway_right_lane = way.Find("cycleway:right:lane")
 	local waterway = way:Find("waterway")
 	local water    = way:Find("water")
 	local building = way:Find("building")
@@ -300,14 +300,14 @@ function way_function(way)
 			way:MinZoom(minzoom)
 			SetZOrder(way)
 			way:Attribute("class", h)
-			if bicycle then way:Attribute("bicycle", bicycle) end
-			if cycleway then way:Attribute("cycleway", cycleway) end
-			if surface then way:Attribute("surface", surface) end
-			if cyclestreet then way:Attribute("cyclestreet", cyclestreet) end
-			if oneway_bicycle then way.Attribute("oneway:bicycle", oneway_bicycle) end
-			if cycleway_lane then way.Attribute("cycleway:lane", cycleway_lane) end
-			if cycleway_left_lane then way.Attribute("cycleway:left:lane", cycleway_left_lane) end
-			if cycleway_right_lane then way.Attribute("cycleway:right:lane", cycleway_right_lane) end
+			if bicycle~="" then way:Attribute("bicycle", bicycle) end
+			if cycleway~="" then way:Attribute("cycleway", cycleway) end
+			if surface~="" then way:Attribute("surface", surface) end
+			if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
+			if oneway_bicycle~="" then way.Attribute("oneway:bicycle", oneway_bicycle) end
+			if cycleway_lane~="" then way.Attribute("cycleway:lane", cycleway_lane) end
+			if cycleway_left_lane~="" then way.Attribute("cycleway:left:lane", cycleway_left_lane) end
+			if cycleway_right_lane~="" then way.Attribute("cycleway:right:lane", cycleway_right_lane) end
 			if h~=highway then way:Attribute("subclass",highway) end
 			SetBrunnelAttributes(way)
 			if ramp then way:AttributeNumeric("ramp",1) end
