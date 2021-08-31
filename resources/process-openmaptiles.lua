@@ -304,10 +304,10 @@ function way_function(way)
 			if cycleway~="" then way:Attribute("cycleway", cycleway) end
 			if surface~="" then way:Attribute("surface", surface) end
 			if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
-			if oneway_bicycle~="" then way.Attribute("oneway_bicycle", oneway_bicycle) end
+			if oneway_bicycle~="" then way.Attribute("oneway:bicycle", oneway_bicycle) end
 			-- if cycleway_lane~="" then way.Attribute("cycleway:lane", cycleway_lane) end
-			if cycleway_left~="" then way.Attribute("cycleway:left", cycleway_left) end
-			if cycleway_right~="" then way.Attribute("cycleway:right", cycleway_right) end
+			--if cycleway_left~="" then way.Attribute("cycleway::left", cycleway_left) end
+			--if cycleway_right~="" then way.Attribute("cycleway::right", cycleway_right) end
 			if h~=highway then way:Attribute("subclass",highway) end
 			SetBrunnelAttributes(way)
 			if ramp then way:AttributeNumeric("ramp",1) end
