@@ -305,7 +305,7 @@ function way_function(way)
 			if cycleway~="" then way:Attribute("cycleway", cycleway) end
 			if surface~="" then way:Attribute("surface", surface) end
 			if cyclestreet~="" then way:Attribute("cyclestreet", cyclestreet) end
-			if onewaybicycle~="" then way.Attribute("oneway", onewaybicycle) end
+			--if onewaybicycle~="" then way.Attribute("oneway", onewaybicycle) end
 			--if cycleway_lane~="" then way.Attribute("cycleway_lane", cycleway_lane) end
 			--if cycleway_left~="" then way.Attribute("cycleway_left", cycleway_left) end
 			--if cycleway_right~="" then way.Attribute("cycleway_right", cycleway_right) end
